@@ -1,6 +1,6 @@
 Summary: nethserver collectd configuration
 Name: nethserver-collectd
-Version: 2.0.3
+Version: 2.0.4
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -39,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 
 %changelog
+* Thu Oct 20 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 2.0.4-1
+- NethServer joined to AD fail Kerberos ticket renewal - Bug #3428 [NethServer 6]
+
 * Tue Sep 06 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 2.0.3-1
 - Collectd 5: avoid rrd write problems on overloaded machines - Enhancement #3423 [NethServer 6]
 
