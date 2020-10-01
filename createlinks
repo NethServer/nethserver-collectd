@@ -54,3 +54,10 @@ $event = "post-restore-data";
 event_actions($event,'nethserver-collectd-ns6upgrade' => '60');
 
 exit;
+
+#--------------------------------------------------
+# actions for interface-update event
+#--------------------------------------------------
+$event = "interface-update";
+templates2events("/etc/collectd.d/ping.conf",  $event);
+event_services($event, 'collectd' => 'restart');
