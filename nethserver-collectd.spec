@@ -1,6 +1,6 @@
 Summary: nethserver collectd configuration
 Name: nethserver-collectd
-Version: 3.1.0
+Version: 3.1.1
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -37,6 +37,9 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+* Tue Oct 06 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 3.1.1-1
+- Collectd keeps gathering lsm data when multiwan is disabled - Bug NethServer/dev#6293
+
 * Thu Sep 05 2019 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 3.1.0-1
 - Exclude all tmpfs (#12)
 
